@@ -1,3 +1,5 @@
+#Quiz API
+
 ##About the Project
 
 A simple quiz with 10 questions, having one correct answer per question, composed of REST API and CLI that talks with the API
