@@ -1,0 +1,76 @@
+definitions:
+  models.FinalResult:
+    properties:
+      percentageRanking:
+        type: integer
+      personalScore:
+        type: integer
+      questionResults:
+        items:
+          $ref: '#/definitions/models.QuestionResult'
+        type: array
+    type: object
+  models.QuestionResult:
+    properties:
+      correct:
+        type: boolean
+      correctAnswer:
+        type: string
+      question:
+        type: string
+      selectedAnswer:
+        type: string
+    type: object
+  models.QuizQuestion:
+    properties:
+      answers:
+        items:
+          type: string
+        type: array
+      correctAnswer:
+        type: string
+      id:
+        type: integer
+      question:
+        type: string
+      topic:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /api/answers:
+    post:
+      consumes:
+      - application/json
+      description: check answers and generate final result
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.FinalResult'
+            type: array
+      summary: check answers and generate final result
+      tags:
+      - Answers
+  /api/questions:
+    get:
+      consumes:
+      - application/json
+      description: Get all available questions.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.QuizQuestion'
+            type: array
+      summary: Get all available questions.
+      tags:
+      - Questions
+swagger: "2.0"

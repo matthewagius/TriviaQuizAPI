@@ -1,0 +1,119 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/api/answers": {
+            "post": {
+                "description": "check answers and generate final result",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Answers"
+                ],
+                "summary": "check answers and generate final result",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.FinalResult"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/questions": {
+            "get": {
+                "description": "Get all available questions.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Questions"
+                ],
+                "summary": "Get all available questions.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.QuizQuestion"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.FinalResult": {
+            "type": "object",
+            "properties": {
+                "percentageRanking": {
+                    "type": "integer"
+                },
+                "personalScore": {
+                    "type": "integer"
+                },
+                "questionResults": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.QuestionResult"
+                    }
+                }
+            }
+        },
+        "models.QuestionResult": {
+            "type": "object",
+            "properties": {
+                "correct": {
+                    "type": "boolean"
+                },
+                "correctAnswer": {
+                    "type": "string"
+                },
+                "question": {
+                    "type": "string"
+                },
+                "selectedAnswer": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.QuizQuestion": {
+            "type": "object",
+            "properties": {
+                "answers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "correctAnswer": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "question": {
+                    "type": "string"
+                },
+                "topic": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

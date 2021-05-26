@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "topic": "Sports",
+    "question": "How many soccer players should each team have on the field at the start of each match?",
+    "answers": ["10", "12", "11", "13"],
+    "correctAnswer": "11"
+  },
+  {
+    "id": 2,
+    "topic": "Sports",
+    "question": "Which racer holds the record for the most Grand Prix wins?",
+    "answers": [
+      "Lewis Hamilton",
+      "Ayrton Senna",
+      "Michael Schumacher",
+      "Alain Prost"
+    ],
+    "correctAnswer": "Michael Schumacher"
+  },
+  {
+    "id": 3,
+    "topic": "Sports",
+    "question": " In what year was the first-ever Wimbledon Championship held?",
+    "answers": ["1977", "1967", "1877", "1887"],
+    "correctAnswer": "1877"
+  },
+  {
+    "id": 4,
+    "topic": "Technology",
+    "question": "Who is/are the creator(s) of golang?",
+    "answers": [
+      "Robert Griesemer",
+      "Rob Pike",
+      "Ken Thompson",
+      "All of the Above"
+    ],
+    "correctAnswer": "All of the Above"
+  },
+  {
+    "id": 5,
+    "topic": "Technology",
+    "question": "What does HTTP stand for?",
+    "answers": [
+      "Higher Text Transfer Protocol",
+      "Hyper Text Transfer Protocol",
+      "Hyper Text Technical Process",
+      "High Text Transfer Protocol"
+    ],
+    "correctAnswer": "Hyper Text Transfer Protocol"
+  },
+  {
+    "id": 6,
+    "topic": "Technology",
+    "question": "Which operation takes more than O(1) time with a Hash Table?",
+    "answers": ["Search", "Sort", "Insert", "Delete"],
+    "correctAnswer": "Sort"
+  },
+  {
+    "id": 7,
+    "topic": "Technology",
+    "question": "When was Go created?",
+    "answers": ["2007", "2009", "2011", "2012"],
+    "correctAnswer": "2009"
+  },
+  {
+    "id": 8,
+    "topic": "Science",
+    "question": "Which planet is the hottest in the solar system?",
+    "answers": ["Earth", "Mars", "Jupiter", "Venus"],
+    "correctAnswer": "Venus"
+  },
+  {
+    "id": 9,
+    "topic": "Science",
+    "question": "Plants use photosynthesis to produce what food or energy source?",
+    "answers": ["Water", "Sunlight", "Carbon dioxide", "Glucose"],
+    "correctAnswer": "Glucose"
+  },
+  {
+    "id": 10,
+    "topic": "Science",
+    "question": "Amps are a unit of measurement of what?",
+    "answers": [
+      "Electric Charge",
+      "Electric Current",
+      "Electric potential",
+      "Electric Field Strength"
+    ],
+    "correctAnswer": "Electric Current"
+  }
+]
